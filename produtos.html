@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produtos</title>
+    <link rel="stylesheet" href="css/produtos.css" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <h1 class="titulo">Nossos Produtos</h1>
+
+    <div class="filtros">
+      <button onclick="filtrar('todos')">Todos</button>
+      <button onclick="filtrar('doces')">Doces</button>
+      <button onclick="filtrar('salgados')">Salgados</button>
+      <button onclick="filtrar('liquidos')">Líquidos</button>
+      <button onclick="filtrar('confeitaria')">Confeitaria</button>
+    </div>
+
+    <div class="produtos-container">
+      <!-- DOCES -->
+      <div class="card doces">
+        <img src="img/doce1.jpg" alt="Doce 1" />
+        <h3>Brigadeiro</h3>
+        <p>R$ 3,00</p>
+        <i class="fas fa-heart favorito"></i>
+      </div>
+
+      <div class="card doces">
+        <img src="img/doce2.jpg" alt="Doce 2" />
+        <h3>Beijinho</h3>
+        <p>R$ 2,50</p>
+        <i class="fas fa-heart favorito"></i>
+      </div>
+
+      <!-- Repita com mais 3 doces -->
+
+      <!-- SALGADOS -->
+      <div class="card salgados">
+        <img src="img/salgado1.jpg" alt="Salgado 1" />
+        <h3>Coxinha</h3>
+        <p>R$ 5,00</p>
+        <i class="fas fa-heart favorito"></i>
+      </div>
+
+      <!-- Repita com mais 4 salgados -->
+
+      <!-- LÍQUIDOS -->
+      <div class="card liquidos">
+        <img src="img/liquido1.jpg" alt="Suco Natural" />
+        <h3>Suco Natural</h3>
+        <p>R$ 4,00</p>
+        <i class="fas fa-heart favorito"></i>
+      </div>
+
+      <!-- Repita com mais 4 líquidos -->
+
+      <!-- CONFEITARIA -->
+      <div class="card confeitaria">
+        <img src="img/bolo1.jpg" alt="Bolo de Chocolate" />
+        <h3>Bolo de Chocolate</h3>
+        <p>R$ 20,00</p>
+        <i class="fas fa-heart favorito"></i>
+      </div>
+
+      <!-- Repita com mais 4 confeitaria -->
+    </div>
+    <br>
+    <div id="footer-placeholder"></div>
+
+    <script src="script/produtos.js"></script>
+    <script>
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+        });
+        fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+  </body>
+  </body>
+</html>
